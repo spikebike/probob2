@@ -5,7 +5,7 @@ import (
 	"log"
 	"net"
 	"github.com/golang/protobuf/proto"
-	"github.com/probob2/sum"
+	"github.com/spikebike/probob2/sum"
 )
 
 func main() {
