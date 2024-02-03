@@ -11,7 +11,9 @@ func main() {
 	conn, err := net.Dial("tcp", "localhost:50051")
 	if err != nil {
 		log.Fatal(err)
-	}
+	} else { 
+		log.Println("dial worked")
+   }
 	defer conn.Close()
 
 	// Create ByteArrays struct and marshal it to bytes
@@ -22,11 +24,15 @@ func main() {
 	data, err := proto.Marshal(msg)
 	if err != nil {
 		log.Fatal(err)
-	}
+	} else { 
+		log.Println("dial worked")
+   }
 
 	_, err = conn.Write(data)
 	if err != nil {
 		log.Fatal(err)
+	} else { 
+		log.Println("write worked")
 	}
 
 	// Then, read echoed data
@@ -34,6 +40,8 @@ func main() {
 	n, err := conn.Read(echoData)
 	if err != nil {
 		log.Fatal(err)
+	} else { 
+		log.Println("read worked")
 	}
 	
 	// Unmarshal echoed data
@@ -41,6 +49,8 @@ func main() {
 	err = proto.Unmarshal(echoData[:n], echoMsg)
 	if err != nil {
 		log.Fatal(err)
+	} else { 
+		log.Println("unmarshal worked")
 	}
 
 	log.Println("Read from server: ", echoMsg)
