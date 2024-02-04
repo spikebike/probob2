@@ -36,8 +36,8 @@ func main() {
 	}
 
 	// Then, read echoed data
-	echoData := make([]byte, 1024)
-	n, err := conn.Read(echoData)
+	echoData := make([]byte, 1024) 
+	n, err := conn.Read(echoData) // hangs here on client
 	if err != nil {
 		log.Fatal(err)
 	} else { 
