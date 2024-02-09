@@ -1,9 +1,0 @@
-syntax = "proto3";
-
-option go_package = "github.com/spikebike/probob2/sum";
-
-message ByteArrays {
-  repeated bytes arrays = 1;
-}
-
-

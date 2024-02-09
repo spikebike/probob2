@@ -2,16 +2,16 @@
 package main
 
 import (
-    "fmt"
-    "io"
     "log"
     "net"
 
-    "github.com/spikebike/probob2/matrix" // Import the generated Protobuf code
+	"github.com/spikebike/probob2/matrix" // Import the generated Protobuf code
+	"google.golang.org/protobuf/proto"
+
 )
 
 func main() {
-    conn, err := net.Dial("tcp", "localhost:8080")
+    conn, err := net.Dial("tcp", "localhost:13080")
     if err != nil {
         log.Fatal(err)
     }

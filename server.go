@@ -8,6 +8,8 @@ import (
     "net"
 
     "github.com/spikebike/probob2/matrix"
+	 "google.golang.org/protobuf/proto"
+
 )
 
 func handleConnection(conn net.Conn) {
@@ -36,7 +38,7 @@ func handleConnection(conn net.Conn) {
 }
 
 func main() {
-    listener, err := net.Listen("tcp", ":8080")
+    listener, err := net.Listen("tcp", ":13080")
     if err != nil {
         log.Fatal(err)
     }
