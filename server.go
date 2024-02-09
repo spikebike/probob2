@@ -3,11 +3,11 @@ package main
 
 import (
     "fmt"
-    "io"
+//    "io"
     "log"
     "net"
 
-    "github.com/spikebike/probob2"
+    "github.com/spikebike/probob2/matrix"
 )
 
 func handleConnection(conn net.Conn) {

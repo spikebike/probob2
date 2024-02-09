@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/spikebike/probob2";
+option go_package = "github.com/spikebike/probob2/matrix";
 
 message Matrix {
     repeated bytes rows = 1; 
